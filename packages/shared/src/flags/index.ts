@@ -49,6 +49,7 @@ export const flagFormSchema = z
 			.min(1, "Name is required")
 			.max(100, "Name too long")
 			.optional(),
+		folder: z.string().optional(),
 		description: z.string().optional(),
 		type: flagTypeEnum,
 		status: z.enum(["active", "inactive", "archived"]),
